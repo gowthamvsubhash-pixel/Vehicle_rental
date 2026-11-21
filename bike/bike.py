@@ -1,20 +1,9 @@
-from vehicle import vehicle
+from vehicle import vehicle    # Imports the vehicle class from the vehicle.py file.
 
-class bike(vehicle):
+class bike(vehicle):    # Creates a bike class that inherits from the vehicle class.
 
-    def calculate_rent(self, days):
-        total_rent = (self.get_rental_price()*days)+100
-        return 
+    def calculate_rent(self, days):   # Defines a method to calculate the bike rental cost based on the number of days.
+        total_rent = (self.get_rental_price()*days)+100   # Calculates the total rent by multiplying the daily rental price by the number of days and adding a fixed charge of ₹100.
+        return    # Returns the final rental amount.
 
 
-bike1 =bike("Royal enfield 350 :",800)
-bike2 = bike("Duke 390 :",900)
-
-print("----BIKE RENTAL DETAILS----")
-print("************************************")
-bike1.display_vehicle_details()
-bike2.display_vehicle_details()
-bike_rent = bike1.calculate_rent(3)
-bike_rent2 = bike2.calculate_rent(3)
-print(f"Final rental amount for 3 days :{bike_rent} For Royal Enfield 350")
-print(f"Final rental amount for 3 days :{bike_rent2} For Duke 390")
